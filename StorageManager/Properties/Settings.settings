@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="StorageManager.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AccountName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">techjamlocal</Value>
+    </Setting>
+    <Setting Name="AccountKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bK5kVo+SrE2R5yvISEFEtUpkThvukNgZYWGysLtj4A9YeStXFKyeLeEwd5OtLrQNHS5SlNYOgVULqkJdQVJmbQ==</Value>
+    </Setting>
+    <Setting Name="FlickrAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">783f2c1c04151770d671671f7f92e32c</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

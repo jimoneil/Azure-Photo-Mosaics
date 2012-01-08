@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="80e83781-66ef-41e9-97c6-487770dcee30" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6727/JobBroker.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JobBroker.xsd" MetadataType="Schema" ID="6f327e04-0778-4edf-8afd-1765f4558533" SourceId="1" SourceUrl="http://localhost:6727/JobBroker.svc?xsd=xsd1" />
+    <MetadataFile FileName="JobBroker.disco" MetadataType="Disco" ID="7702e6fc-7765-4775-9689-4c2f7ace60fb" SourceId="1" SourceUrl="http://localhost:6727/JobBroker.svc?disco" />
+    <MetadataFile FileName="JobBroker.wsdl" MetadataType="Wsdl" ID="ad1bd7ba-98f9-468e-a0c6-425988e3da2d" SourceId="1" SourceUrl="http://localhost:6727/JobBroker.svc?wsdl" />
+    <MetadataFile FileName="JobBroker1.xsd" MetadataType="Schema" ID="08049539-800f-4ec3-86d9-87ecc267a110" SourceId="1" SourceUrl="http://localhost:6727/JobBroker.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

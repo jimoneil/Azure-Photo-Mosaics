@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/CloudDAL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CloudDAL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:6727/StorageBroker.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:6727/StorageBroker.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.WindowsAzure.StorageClient" />
+  <xs:complexType name="ArrayOfJobEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobEntry" nillable="true" type="tns:JobEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJobEntry" nillable="true" type="tns:ArrayOfJobEntry" />
+  <xs:complexType name="JobEntry">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.WindowsAzure.StorageClient" base="q1:TableServiceEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinalImageUri" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinishTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RequestId" type="ser:guid" />
+          <xs:element minOccurs="0" name="Slices" type="xs:int" />
+          <xs:element minOccurs="0" name="SourceHeight" type="xs:int" />
+          <xs:element minOccurs="0" name="SourceImage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceImageUri" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceWidth" type="xs:int" />
+          <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TileSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobEntry" nillable="true" type="tns:JobEntry" />
+  <xs:complexType name="ArrayOfStatusEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatusEntry" nillable="true" type="tns:StatusEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatusEntry" nillable="true" type="tns:ArrayOfStatusEntry" />
+  <xs:complexType name="StatusEntry">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.WindowsAzure.StorageClient" base="q2:TableServiceEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequestId" type="ser:guid" />
+          <xs:element minOccurs="0" name="RoleId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StatusEntry" nillable="true" type="tns:StatusEntry" />
+</xs:schema>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PhotoMosaic", "PhotoMosaic.vbproj", "{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Debug|x64.ActiveCfg = Debug|x64
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Debug|x64.Build.0 = Debug|x64
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Debug|x86.ActiveCfg = Debug|x86
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Debug|x86.Build.0 = Debug|x86
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Release|x64.ActiveCfg = Release|x64
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Release|x64.Build.0 = Release|x64
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Release|x86.ActiveCfg = Release|x86
+		{8B4B7B8C-450C-4F82-B414-A2083BD2A0BF}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

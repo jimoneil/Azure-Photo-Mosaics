@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c07da380-4c0a-4e79-8869-b103816a6b98" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:6727/StorageBroker.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="StorageBroker5.xsd" MetadataType="Schema" ID="140d73a7-ce67-40e3-9877-3a39dc888f96" SourceId="1" SourceUrl="http://localhost:6727/StorageBroker.svc?xsd=xsd0" />
+    <MetadataFile FileName="StorageBroker1.disco" MetadataType="Disco" ID="f9fda50d-ff5c-4b77-9ede-1a3fd3003a2a" SourceId="1" SourceUrl="http://localhost:6727/StorageBroker.svc?disco" />
+    <MetadataFile FileName="StorageBroker51.xsd" MetadataType="Schema" ID="20755f79-2f31-46d4-9f58-0d1524c91ebd" SourceId="1" SourceUrl="http://localhost:6727/StorageBroker.svc?xsd=xsd3" />
+    <MetadataFile FileName="StorageBroker.xsd" MetadataType="Schema" ID="4e8fc5a7-a92b-4c35-8d9a-feb9578f95b9" SourceId="1" SourceUrl="http://localhost:6727/StorageBroker.svc?xsd=xsd6" />
+    <MetadataFile FileName="StorageBroker52.xsd" MetadataType="Schema" ID="5f5ac8ee-0ea3-46fa-baf4-ae5d2c3d7bd8" SourceId="1" SourceUrl="http://localhost:6727/StorageBroker.svc?xsd=xsd1" />
+    <MetadataFile FileName="StorageBroker53.xsd" MetadataType="Schema" ID="2f003570-c090-49f2-b5af-fd41d4f5c477" SourceId="1" SourceUrl="http://localhost:6727/StorageBroker.svc?xsd=xsd5" />
+    <MetadataFile FileName="StorageBroker54.xsd" MetadataType="Schema" ID="6aa7697d-15fd-46fa-902f-01fb9c852ee5" SourceId="1" SourceUrl="http://localhost:6727/StorageBroker.svc?xsd=xsd4" />
+    <MetadataFile FileName="StorageBroker55.xsd" MetadataType="Schema" ID="37528631-309a-413a-9559-3e29a8f14d19" SourceId="1" SourceUrl="http://localhost:6727/StorageBroker.svc?xsd=xsd2" />
+    <MetadataFile FileName="StorageBroker.wsdl" MetadataType="Wsdl" ID="aef310dc-c373-46c0-9f2c-3342c408de5f" SourceId="1" SourceUrl="http://localhost:6727/StorageBroker.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

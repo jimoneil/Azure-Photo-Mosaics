@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="AzureService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*">
+  <Role name="AzureJobController">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="ApplicationStorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName={accountName};AccountKey={accountKey}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName={accountName};AccountKey={accountKey}" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="AzureImageProcessor">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="ApplicationStorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName={accountName};AccountKey={accountKey}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName={accountName};AccountKey={accountKey}" />
+      <Setting name="CachingMechanism" value="3" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="AzureClientInterface">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="ApplicationStorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName={accountName};AccountKey={accountKey}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName={accountName};AccountKey={accountKey}" />
+      <Setting name="AppFabricNamespace" value="{accountName}" />
+      <Setting name="ServiceBusIssuer" value="owner" />
+      <Setting name="ServiceBusSecret" value="{sharedSecret}" />
+      <Setting name="UserStorageAccountName" value="{accoutName}" />
+      <Setting name="UserStorageAccountKey" value="{accountKey}" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

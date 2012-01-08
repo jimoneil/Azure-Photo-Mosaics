@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DiagnosticMonitorConfiguration xmlns="http://schemas.microsoft.com/ServiceHosting/2010/10/DiagnosticsConfiguration"
+      configurationChangePollInterval="PT1H"
+      overallQuotaInMB="4096">
+  <DiagnosticInfrastructureLogs bufferQuotaInMB="1024"
+     scheduledTransferLogLevelFilter="Error"
+     scheduledTransferPeriod="PT30M" />
+  <Logs bufferQuotaInMB="1024"
+     scheduledTransferLogLevelFilter="Warning"
+     scheduledTransferPeriod="PT10S" />
+  <Directories bufferQuotaInMB="1024" scheduledTransferPeriod="PT30M">
+    <FailedRequestLogs container="wad-frq" directoryQuotaInMB="256" />
+    <IISLogs container="wad-iis" directoryQuotaInMB="256" />
+  </Directories>
+</DiagnosticMonitorConfiguration>

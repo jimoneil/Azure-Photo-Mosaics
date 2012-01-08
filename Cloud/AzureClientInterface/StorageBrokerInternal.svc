@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Factory="AzureClientInterface.InternalServiceHostFactory" Service="AzureClientInterface.StorageBrokerInternal" CodeBehind="StorageBrokerInternal.svc.cs" %>

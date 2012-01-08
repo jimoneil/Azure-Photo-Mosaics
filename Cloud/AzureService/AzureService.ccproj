@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>1.6</ProductVersion>
+    <ProjectGuid>{0f0d5411-eec5-4719-8ae4-b7d21210c440}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AzureService</RootNamespace>
+    <AssemblyName>AzureService</AssemblyName>
+    <StartDevelopmentStorage>True</StartDevelopmentStorage>
+    <Name>AzureService</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- Items for the project -->
+  <ItemGroup>
+    <ServiceDefinition Include="ServiceDefinition.csdef" />
+    <ServiceConfiguration Include="ServiceConfiguration.cscfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AzureClientInterface\AzureClientInterface.csproj">
+      <Name>AzureClientInterface</Name>
+      <Project>{4f62137f-92ac-41b9-9525-c3eb44732152}</Project>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <RoleName>AzureClientInterface</RoleName>
+    </ProjectReference>
+    <ProjectReference Include="..\AzureImageProcessor\AzureImageProcessor.vbproj">
+      <Name>AzureImageProcessor</Name>
+      <Project>{d9ed64b9-6097-4603-bd16-7d3a30a0a6bf}</Project>
+      <Private>True</Private>
+      <RoleType>Worker</RoleType>
+      <RoleName>AzureImageProcessor</RoleName>
+    </ProjectReference>
+    <ProjectReference Include="..\AzureJobController\AzureJobController.csproj">
+      <Name>AzureJobController</Name>
+      <Project>{aadec86b-7419-4a31-95a7-0bd23e737828}</Project>
+      <Private>True</Private>
+      <RoleType>Worker</RoleType>
+      <RoleName>AzureJobController</RoleName>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Profiles" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishProfile Include="Profiles\Mosaic GeneratorProduction.azurePubxml" />
+  </ItemGroup>
+  <!-- Import the target files for this project template -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\1.6\</CloudExtensionsDir>
+  </PropertyGroup>
+  <Import Project="$(CloudExtensionsDir)Microsoft.WindowsAzure.targets" />
+</Project>

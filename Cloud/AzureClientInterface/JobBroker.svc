@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Factory="AzureClientInterface.ExternalServiceHostFactory" Service="AzureClientInterface.JobBroker" CodeBehind="JobBroker.svc.cs" %>

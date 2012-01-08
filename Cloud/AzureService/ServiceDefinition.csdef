@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="AzureService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <WorkerRole name="AzureJobController">
+    <ConfigurationSettings>
+      <Setting name="ApplicationStorageConnectionString" />
+    </ConfigurationSettings>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+  </WorkerRole>
+  <WorkerRole name="AzureImageProcessor">
+    <ConfigurationSettings>
+      <Setting name="ApplicationStorageConnectionString" />
+      <Setting name="CachingMechanism" />
+    </ConfigurationSettings>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+  </WorkerRole>
+  <WebRole name="AzureClientInterface">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="ExternalHttpEndpoint" />
+          <Binding name="Internal" endpointName="InternalHttpEndpoint" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="ExternalHttpEndpoint" protocol="http" port="80" />
+      <InternalEndpoint name="InternalHttpEndpoint" protocol="http" />
+    </Endpoints>
+    <ConfigurationSettings>
+      <Setting name="ApplicationStorageConnectionString" />
+      <Setting name="AppFabricNamespace" />
+      <Setting name="ServiceBusSecret" />
+      <Setting name="ServiceBusIssuer" />
+      <Setting name="UserStorageAccountKey" />
+      <Setting name="UserStorageAccountName" />
+    </ConfigurationSettings>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+  </WebRole>
+</ServiceDefinition>
